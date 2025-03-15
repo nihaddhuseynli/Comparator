@@ -14,10 +14,6 @@ public class Main {
         System.out.println("Sorted by ID:");
         students.forEach(System.out::println);
 
-        Collections.sort(students, (s1, s2) -> Double.compare(s2.getGrade(), s1.getGrade()));
-        System.out.println("\nSorted by Grade (descending):");
-        students.forEach(System.out::println);
-
         Collections.sort(students, (s1, s2) -> {
             int gradeCompare = Double.compare(s2.getGrade(), s1.getGrade());
             if (gradeCompare != 0) return gradeCompare;
